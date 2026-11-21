@@ -1,0 +1,53 @@
+{
+  "attribution": "演唱会现场照片由 INTERSTELLAR·汪苏泷 拍摄，采用 CC BY-SA 4.0 许可。本日历为个人非官方主题版，与艺人及经纪公司无关。",
+  "photos": [
+    {
+      "id": "nanning-2025",
+      "title": "「十万伏特2.0」巡回演唱会 · 南宁站 D2",
+      "date": "2025-12-20",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E5%8D%81%E8%90%AC%E4%BC%8F%E7%89%B92.0%E5%B7%A1%E8%BF%B4%E6%BC%94%E5%94%B1%E6%9C%83_%E5%8D%97%E5%AF%A7%E7%AB%99D2.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/ca/%E5%8D%81%E8%90%AC%E4%BC%8F%E7%89%B92.0%E5%B7%A1%E8%BF%B4%E6%BC%94%E5%94%B1%E6%9C%83_%E5%8D%97%E5%AF%A7%E7%AB%99D2.jpg",
+      "credit_page": "https://weibo.com/7574935809/5246061406850872",
+      "author": "INTERSTELLAR·汪苏泷",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "out": "hero-nanning.jpg",
+      "object_pos": "50% 12%",
+      "bytes": 250254,
+      "width": 1200,
+      "height": 1800
+    },
+    {
+      "id": "macau-2026",
+      "title": "「罗曼前传」世界巡回演唱会 · 澳门站 D1",
+      "date": "2026-02-27",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E7%BE%85%E6%9B%BC%E5%89%8D%E5%82%B3%E4%B8%96%E7%95%8C%E5%B7%A1%E8%BF%B4%E6%BC%94%E5%94%B1%E6%9C%83_%E6%BE%B3%E9%96%80%E7%AB%99D1.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/99/%E7%BE%85%E6%9B%BC%E5%89%8D%E5%82%B3%E4%B8%96%E7%95%8C%E5%B7%A1%E8%BF%B4%E6%BC%94%E5%94%B1%E6%9C%83_%E6%BE%B3%E9%96%80%E7%AB%99D1.jpg",
+      "credit_page": "https://weibo.com/7574935809/5271052613582938",
+      "author": "INTERSTELLAR·汪苏泷",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "out": "hero-macau.jpg",
+      "object_pos": "50% 10%",
+      "bytes": 237727,
+      "width": 1200,
+      "height": 1800
+    },
+    {
+      "id": "concert-2024",
+      "title": "汪苏泷 2024 演唱会现场",
+      "date": "2024-09-28",
+      "commons": "https://commons.wikimedia.org/wiki/File:Silence_Wang_02.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/53/Silence_Wang_02.jpg",
+      "credit_page": "https://www.instagram.com/interstellar_0917/p/DA-rBBnJBXl/",
+      "author": "INTERSTELLAR·汪苏泷",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "out": "hero-2024.jpg",
+      "object_pos": "48% 18%",
+      "bytes": 180597,
+      "width": 1200,
+      "height": 1792
+    }
+  ]
+}

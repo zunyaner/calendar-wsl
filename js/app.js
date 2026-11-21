@@ -256,8 +256,13 @@
     if (!todayInRange()) return "";
     const ym = currentMonthYM();
     const { y, m } = parseYM(ym);
+    const ph = monthPhoto(y, m);
+    const credit = ph
+      ? `<div class="month-photo-credit">本月背景：${escapeHtml(ph.title)} · 摄影 ${escapeHtml(ph.author)} · ${escapeHtml(ph.license)}</div>`
+      : "";
     return `<div class="sec-title">本月 <button data-go="#/m/${ym}">打开详情</button></div>
-        <div class="this-month">${miniMonth(y, m, today, true)}</div>`;
+        <div class="this-month">${miniMonth(y, m, today, true)}</div>
+        ${credit}`;
   }
 
   function formatLong(iso) {
@@ -265,10 +270,27 @@
     return `${Number(y)}年${Number(m)}月${Number(d)}日`;
   }
 
+  function monthPhoto(y, m) {
+    const photos = DATA.photos || [];
+    if (!photos.length) return null;
+    return photos[(y * 12 + m) % photos.length];
+  }
+
+  function monthPhotoStyle(y, m) {
+    const ph = monthPhoto(y, m);
+    if (!ph) return "";
+    const src = ph.month_out || ph.out;
+    const pos = ph.month_pos || ph.object_pos || "50% 20%";
+    // background-image must be inline: url() inside a CSS variable is
+    // resolved against css/app.css, not the page, and would 404.
+    return ` style="background-image:url('./icons/${escapeHtml(src)}');background-position:${escapeHtml(pos)}"`;
+  }
+
   function miniMonth(y, m, today, featured) {
     const cells = monthCells(y, m);
     const ym = y + "-" + pad(m);
     const title = featured ? (y + "年" + m + "月") : (m + "月");
+    const photoCls = (DATA.photos && DATA.photos.length) ? " has-photo" : "";
     const daysHtml = cells.map((iso) => {
       if (!iso) return `<div class="cell is-muted"></div>`;
       const d = rec(iso);
@@ -282,7 +304,7 @@
       ].filter(Boolean).join(" ");
       return `<div class="${cls}"><span class="n">${Number(iso.slice(-2))}</span>${lab ? `<span class="lab">${escapeHtml(lab)}</span>` : ""}</div>`;
     }).join("");
-    return `<button type="button" class="mini${featured ? " featured" : ""}" data-go="#/m/${ym}">
+    return `<button type="button" class="mini${featured ? " featured" : ""}${photoCls}" data-go="#/m/${ym}"${monthPhotoStyle(y, m)}>
       <div class="mtitle">${title}</div>
       <div class="dow">${WEEKDAYS.map((w) => `<span>${w}</span>`).join("")}</div>
       <div class="days">${daysHtml}</div>
@@ -336,9 +358,11 @@
           <button class="btn-icon" data-go="${canNext ? "#/m/" + next : "#/m/" + r.ym}" ${canNext ? "" : "disabled"} aria-label="下一月">›</button>
         </span>`
       )}
-      <div class="page month-wrap" id="month-wrap">
-        <div class="month-dow">${WEEKDAYS.map((w) => `<span>${w}</span>`).join("")}</div>
-        <div class="month-grid">${grid}</div>
+      <div class="page">
+        <div class="month-wrap has-photo" id="month-wrap"${monthPhotoStyle(y, m)}>
+          <div class="month-dow">${WEEKDAYS.map((w) => `<span>${w}</span>`).join("")}</div>
+          <div class="month-grid">${grid}</div>
+        </div>
         <div class="legend" style="margin-top:12px">
           <span><i style="background:var(--国定)"></i>国定</span>
           <span><i style="background:var(--休)"></i>休</span>
@@ -346,6 +370,7 @@
           <span><i style="background:var(--班)"></i>班</span>
           <span><i style="background:var(--周末)"></i>周末</span>
         </div>
+        ${monthPhoto(y, m) ? `<div class="month-photo-credit">${escapeHtml(monthPhoto(y, m).title)} · 摄影 ${escapeHtml(monthPhoto(y, m).author)} · ${escapeHtml(monthPhoto(y, m).license)}</div>` : ""}
       </div>
     </div>`;
     bindNav();
@@ -414,7 +439,7 @@
         </div>
         <div class="block">
           <h3>现场照片来源</h3>
-          <p>主页大图均为演唱会现场照，采用 CC BY-SA 4.0 许可，摄影均为 INTERSTELLAR·汪苏泷。</p>
+          <p>主页大图和每月日历背景均为现场照片，采用 CC BY-SA 4.0 许可。摄影见下方各条。维基共享上目前能合法使用的现场照只有这些，月份背景会按月轮换。</p>
           <ul>${(DATA.photos || []).map((ph) =>
             `<li>${escapeHtml(ph.title)}（${escapeHtml(ph.date)}）<br><a href="${escapeHtml(ph.commons)}" target="_blank" rel="noopener">Wikimedia Commons</a> · <a href="${escapeHtml(ph.license_url)}" target="_blank" rel="noopener">${escapeHtml(ph.license)}</a></li>`
           ).join("")}</ul>

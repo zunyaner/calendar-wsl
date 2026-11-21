@@ -1,5 +1,5 @@
 /* 2027日历 service worker — static, cache-first, relative URLs */
-const CACHE = "cal2027-wsl-v1";
+const CACHE = "cal2027-wsl-v2";
 const ASSETS = [
   "./",
   "./index.html",
@@ -13,6 +13,13 @@ const ASSETS = [
   "./icons/hero-nanning.jpg",
   "./icons/hero-macau.jpg",
   "./icons/hero-2024.jpg",
+  "./icons/hero-chengdu.jpg",
+  "./icons/hero-nanjing.jpg",
+  "./icons/month-nanning.jpg",
+  "./icons/month-macau.jpg",
+  "./icons/month-2024.jpg",
+  "./icons/month-chengdu.jpg",
+  "./icons/month-nanjing.jpg",
   "./data/photo-credits.json",
   "./company-2027.ics"
 ];

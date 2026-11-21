@@ -1,24 +1,25 @@
-/* 2027日历·汪苏泷 — concert pink/purple theme, mobile-first */
+/* 2027日历·汪苏泷 — 蜜桃粉 theme, mobile-first */
 :root {
-  --coral: #C45A86;
-  --coral-dark: #A3446C;
-  --coral-deep: #6B2A58;
-  --bg: #F6F0F8;
+  --peach: #FFB7C5;
+  --coral: #BE4E68;
+  --coral-dark: #A3445C;
+  --coral-deep: #8E3550;
+  --bg: #FFF5F7;
   --card: #ffffff;
-  --text: #2C1E33;
-  --muted: #7A6680;
-  --line: #E8D5E4;
+  --text: #4A2433;
+  --muted: #8A5A68;
+  --line: #F3D0D8;
   --国定: #FFE97F;
   --休: #FDE2E2;
   --年休: #C6E0B4;
   --班: #DCE6F1;
   --今天: #FFD966;
-  --周末: #F8E8E3;
+  --周末: #FFE8EE;
   --high: #D9534F;
   --mid: #E89A3C;
   --low: #9A908C;
   --ok: #3D7A3D;
-  --shadow: 0 8px 24px rgba(80, 30, 70, 0.10);
+  --shadow: 0 8px 24px rgba(190, 78, 104, 0.12);
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
   --safe-left: env(safe-area-inset-left, 0px);
@@ -55,8 +56,8 @@ a { color: var(--coral-dark); }
 /* ===== Header ===== */
 .topbar {
   position: sticky; top: 0; z-index: 20;
-  background: linear-gradient(120deg, #3A1548 0%, #6B2A7A 45%, #C45A86 100%);
-  color: #fff;
+  background: linear-gradient(120deg, #F9C4CF 0%, #FFB7C5 45%, #F3A0B2 100%);
+  color: #5A2433;
   padding: calc(var(--safe-top) + 10px) 16px 12px;
   display: flex; align-items: center; justify-content: space-between;
   gap: 8px;
@@ -65,14 +66,14 @@ a { color: var(--coral-dark); }
   margin: 0; font-size: 18px; font-weight: 700; letter-spacing: 0.04em;
 }
 .topbar .btn-icon, .topbar .btn-text {
-  color: #fff;
+  color: #5A2433;
   min-width: 36px; min-height: 36px;
   display: inline-flex; align-items: center; justify-content: center;
   border-radius: 10px;
   font-size: 15px; font-weight: 600;
 }
 .topbar .btn-text { padding: 0 8px; }
-.topbar .btn-icon:active, .topbar .btn-text:active { background: rgba(255,255,255,0.15); }
+.topbar .btn-icon:active, .topbar .btn-text:active { background: rgba(90,36,51,0.08); }
 .topbar .mid {
   display: flex; align-items: center; gap: 10px;
   font-size: 17px; font-weight: 700;
@@ -150,12 +151,12 @@ a { color: var(--coral-dark); }
 .stat span { font-size: 11px; color: var(--muted); }
 .quote {
   grid-column: 1 / -1;
-  background: linear-gradient(135deg, #FBF4FA, #F3DFF0);
+  background: linear-gradient(135deg, #FFF6F8, #FFD9E2);
   border-radius: 12px;
   padding: 10px 12px;
   font-size: 13px;
   line-height: 1.55;
-  color: #4A3050;
+  color: #5A2433;
 }
 .quote em { font-style: normal; color: var(--muted); font-size: 12px; }
 .actions {
@@ -173,7 +174,7 @@ a { color: var(--coral-dark); }
 }
 .btn-primary { background: var(--coral); color: #fff; }
 .btn-primary:active { background: var(--coral-dark); }
-.btn-ghost { background: #fff; color: var(--coral-dark); border: 1px solid #F0C8BE; }
+.btn-ghost { background: #fff; color: var(--coral-dark); border: 1px solid #F3C0CA; }
 .btn-danger { background: #FDE2E2; color: #9E2A2A; }
 
 .hint {
@@ -235,7 +236,7 @@ a { color: var(--coral-dark); }
 }
 .dow { font-size: 9px; color: var(--muted); padding-bottom: 2px; }
 .dow span:nth-child(6), .dow span:nth-child(7),
-.month-dow span:nth-child(6), .month-dow span:nth-child(7) { color: #C0756A; }
+.month-dow span:nth-child(6), .month-dow span:nth-child(7) { color: #C76A7C; }
 .mini .cell {
   min-height: 28px;
   border-radius: 6px;
@@ -339,7 +340,7 @@ a { color: var(--coral-dark); }
 /* ===== Day sheet ===== */
 .backdrop {
   position: fixed; inset: 0; z-index: 40;
-  background: rgba(40, 18, 14, 0.45);
+  background: rgba(74, 36, 51, 0.45);
   display: flex; align-items: flex-end; justify-content: center;
 }
 .sheet {
@@ -359,7 +360,7 @@ a { color: var(--coral-dark); }
 }
 .grab {
   width: 40px; height: 4px; border-radius: 2px;
-  background: #E0C6BE; margin: 4px auto 8px;
+  background: #E8B8C4; margin: 4px auto 8px;
 }
 .sheet h2 { margin: 0 0 4px; font-size: 20px; }
 .sheet .meta { font-size: 13px; color: var(--muted); margin-bottom: 4px; line-height: 1.5; }
@@ -421,7 +422,7 @@ a { color: var(--coral-dark); }
 .toast {
   position: fixed; left: 50%; bottom: calc(24px + var(--safe-bottom));
   transform: translateX(-50%);
-  background: #3A2A26; color: #fff;
+  background: #5A2433; color: #fff;
   padding: 8px 14px; border-radius: 999px;
   font-size: 13px; z-index: 80;
   animation: rise 0.2s ease-out;
@@ -448,3 +449,72 @@ a { color: var(--coral-dark); }
 .this-month .mini .cell { min-height: 36px; border-radius: 8px; }
 .this-month .mini .cell .n { font-size: 13px; }
 .this-month .mini .cell .lab { font-size: 9px; transform: none; }
+
+/* ===== Month card concert photo backgrounds ===== */
+.mini.has-photo,
+.month-wrap.has-photo {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mini.has-photo::before,
+.month-wrap.has-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.72);
+  pointer-events: none;
+  z-index: 0;
+}
+.mini.has-photo > *,
+.month-wrap.has-photo > * {
+  position: relative;
+  z-index: 1;
+}
+/* 全年总览小卡：白膜稍厚，日期更清楚 */
+.year-grid .mini.has-photo::before {
+  background: rgba(255, 247, 249, 0.78);
+}
+/* 本月大卡：照片更透一点 */
+.this-month .mini.has-photo::before {
+  background: rgba(255, 255, 255, 0.62);
+}
+.mini.has-photo .cell {
+  background: rgba(255, 255, 255, 0.28);
+}
+.mini.has-photo .cell.kind-国定 { background: rgba(255, 233, 127, 0.78); }
+.mini.has-photo .cell.kind-休 { background: rgba(253, 226, 226, 0.80); }
+.mini.has-photo .cell.kind-年休 { background: rgba(198, 224, 180, 0.80); }
+.mini.has-photo .cell.kind-班 { background: rgba(220, 230, 241, 0.80); }
+.mini.has-photo .cell.kind-周末 { background: rgba(255, 232, 238, 0.72); }
+.mini.has-photo .cell.is-today {
+  background: rgba(255, 217, 102, 0.92);
+}
+
+.month-wrap.has-photo {
+  border-radius: var(--radius);
+  padding: 10px 8px 12px;
+  box-shadow: var(--shadow);
+}
+.month-wrap.has-photo::before {
+  background: rgba(255, 255, 255, 0.66);
+}
+.month-wrap.has-photo .mcell {
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow: 0 1px 0 rgba(190, 78, 104, 0.06);
+}
+.month-wrap.has-photo .mcell.kind-国定 { background: rgba(255, 246, 200, 0.82); }
+.month-wrap.has-photo .mcell.kind-休 { background: rgba(253, 236, 236, 0.84); }
+.month-wrap.has-photo .mcell.kind-年休 { background: rgba(231, 245, 220, 0.84); }
+.month-wrap.has-photo .mcell.kind-班 { background: rgba(232, 240, 248, 0.84); }
+.month-wrap.has-photo .mcell.kind-周末 { background: rgba(255, 232, 238, 0.76); }
+.month-wrap.has-photo .mcell.is-today { background: rgba(255, 243, 194, 0.94); }
+
+.month-photo-credit {
+  margin: 6px 4px 0;
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.4;
+}

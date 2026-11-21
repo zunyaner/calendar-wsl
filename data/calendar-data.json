@@ -25,20 +25,21 @@
       "年度出勤日": 248
     },
     "countsMatch": true,
-    "theme": "wang-sulong",
-    "paletteNote": "主题色取自演唱会现场的应援粉与舞台品红、蓝紫灯光。",
+    "theme": "wang-sulong-peach-pink",
+    "paletteNote": "主题色采用粉丝常用的蜜桃粉 #FFB7C5；按钮等需要对比度的地方用更深的桃粉 #BE4E68。应援色公开资料只写「粉色」，部分介绍写成偏紫的玫粉色，没有官方色号。",
     "unofficial": "非官方个人主题版，与艺人及经纪公司无关。"
   },
   "colors": {
-    "coral": "#E8735A",
-    "coralDark": "#D45E46",
-    "bg": "#FFF5F0",
+    "peach": "#FFB7C5",
+    "coral": "#BE4E68",
+    "coralDark": "#8E3550",
+    "bg": "#FFF5F7",
     "国定": "#FFE97F",
     "休": "#FDE2E2",
     "年休": "#C6E0B4",
     "班": "#DCE6F1",
     "今天": "#FFD966",
-    "周末": "#F8E8E3"
+    "周末": "#FFE8EE"
   },
   "quotes": [
     {
@@ -7223,48 +7224,65 @@
       "title": "「十万伏特2.0」巡回演唱会 · 南宁站 D2",
       "date": "2025-12-20",
       "commons": "https://commons.wikimedia.org/wiki/File:%E5%8D%81%E8%90%AC%E4%BC%8F%E7%89%B92.0%E5%B7%A1%E8%BF%B4%E6%BC%94%E5%94%B1%E6%9C%83_%E5%8D%97%E5%AF%A7%E7%AB%99D2.jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/c/ca/%E5%8D%81%E8%90%AC%E4%BC%8F%E7%89%B92.0%E5%B7%A1%E8%BF%B4%E6%BC%94%E5%94%B1%E6%9C%83_%E5%8D%97%E5%AF%A7%E7%AB%99D2.jpg",
-      "credit_page": "https://weibo.com/7574935809/5246061406850872",
       "author": "INTERSTELLAR·汪苏泷",
       "license": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "out": "hero-nanning.jpg",
+      "month_out": "month-nanning.jpg",
       "object_pos": "50% 12%",
-      "bytes": 250254,
-      "width": 1200,
-      "height": 1800
+      "month_pos": "50% 18%"
     },
     {
       "id": "macau-2026",
       "title": "「罗曼前传」世界巡回演唱会 · 澳门站 D1",
       "date": "2026-02-27",
       "commons": "https://commons.wikimedia.org/wiki/File:%E7%BE%85%E6%9B%BC%E5%89%8D%E5%82%B3%E4%B8%96%E7%95%8C%E5%B7%A1%E8%BF%B4%E6%BC%94%E5%94%B1%E6%9C%83_%E6%BE%B3%E9%96%80%E7%AB%99D1.jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/9/99/%E7%BE%85%E6%9B%BC%E5%89%8D%E5%82%B3%E4%B8%96%E7%95%8C%E5%B7%A1%E8%BF%B4%E6%BC%94%E5%94%B1%E6%9C%83_%E6%BE%B3%E9%96%80%E7%AB%99D1.jpg",
-      "credit_page": "https://weibo.com/7574935809/5271052613582938",
       "author": "INTERSTELLAR·汪苏泷",
       "license": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "out": "hero-macau.jpg",
+      "month_out": "month-macau.jpg",
       "object_pos": "50% 10%",
-      "bytes": 237727,
-      "width": 1200,
-      "height": 1800
+      "month_pos": "50% 16%"
     },
     {
       "id": "concert-2024",
       "title": "汪苏泷 2024 演唱会现场",
       "date": "2024-09-28",
       "commons": "https://commons.wikimedia.org/wiki/File:Silence_Wang_02.jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/5/53/Silence_Wang_02.jpg",
-      "credit_page": "https://www.instagram.com/interstellar_0917/p/DA-rBBnJBXl/",
       "author": "INTERSTELLAR·汪苏泷",
       "license": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "out": "hero-2024.jpg",
+      "month_out": "month-2024.jpg",
       "object_pos": "48% 18%",
-      "bytes": 180597,
-      "width": 1200,
-      "height": 1792
+      "month_pos": "48% 22%"
+    },
+    {
+      "id": "chengdu-lmf-2024",
+      "title": "成都 LMF 音乐节现场",
+      "date": "2024-11-09",
+      "commons": "https://commons.wikimedia.org/wiki/File:Silence_Wang_%E6%88%90%E9%83%BDLMF%E9%9F%B3%E4%B9%90%E8%8A%82_Dec_2024.jpg",
+      "author": "404notsilence｜汪蘇瀧",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "out": "hero-chengdu.jpg",
+      "month_out": "month-chengdu.jpg",
+      "object_pos": "50% 18%",
+      "month_pos": "50% 22%"
+    },
+    {
+      "id": "nanjing-2026",
+      "title": "乐见潮向音乐嘉年华 · 南京站",
+      "date": "2026-04-11",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%A8%82%E8%A6%8B%E6%BD%AE%E5%90%91%E9%9F%B3%E6%A8%82%E5%98%89%E5%B9%B4%E8%8F%AF%E5%8D%97%E4%BA%AC%E7%AB%99.jpg",
+      "author": "INTERSTELLAR·汪苏泷",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "out": "hero-nanjing.jpg",
+      "month_out": "month-nanjing.jpg",
+      "object_pos": "50% 14%",
+      "month_pos": "50% 18%"
     }
   ]
 }
